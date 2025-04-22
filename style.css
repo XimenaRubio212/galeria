@@ -1,73 +1,67 @@
 /* 1. se aplica colores hexadecimales a elementos de una card*/
 body {
-    margin: 0;
     background-color: #d5d5d5;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/*3. se aqplica un color de fondo rgbatransparente a la galeria*/  
-.galeria {
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.12); /*fondo transparente*/
-/*4. se usa la propiedad backgound para agregar una imagen de fondo*/
-    background-image: url(imagenes/dragon.jpg); 
+    /* font-family: 'Times New Roman', Times, serif; */
+    /*4. se usa la propiedad backgound para agregar una imagen de fondo*/
+    background-image: url(imagenes/dragon.jpg);
+    background-color: rgba(0, 0, 0, 0.12); /*fondo transparente*/ 
     /*5. Establece la posicion del fondo con background-position*/
-    background-position: center;
+    background-position: top;
     /*6. se ajusta el tamaño de un fondo con background-si-ze*/
-    background-size: auto;
+    background-size: cover;
     /*7. se explora el efecto de desplazamiento con bavground-attachment*/
-    background-attachment: scroll;
-    /*16. se usa unidades vh y vw para definir la altura y el ancho de la galeria*/
-    height: 90vh;
-    width: 90vw;
-    margin: auto;
-    overflow-y: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
 
 /*14. se usa em para definir margenes y paddings de las cards*/
 .card {
     display: inline-block;
-    width: 20%; /* para que quepan 4 por fila con márgenes */
-    margin: 1em; /*margen usando em*/
-    padding: 1em; /*padding usando em*/
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    object-fit: cover;
+    width: 340px;
+    /* para que quepan 4 por fila con márgenes */
+    height: 420px;
+    margin: 1em;
+    /* margen usando em */
+    padding: 1em;
+    /* padding usando em */ 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     text-align: center;
-    font-style: italic;
-    font-weight: normal;
-    vertical-align: top;
+    box-sizing: border-box;
+    /* font-style: italic; */
+    /* font-weight: normal; */
+    /* vertical-align: top; */
     /*15. se compara el comportamiento entre px, em y rem en un mismo contenedor*/
-    font-size: 1rem; /*tamaño de fuente de base*/
-    line-height: 1.5rem; /*espaciado entre lineas*/
+    /* font-size: 1rem; tamaño de fuente de base */
+    /* line-height: 1.5rem; espaciado entre lineas */
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.Letra {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*11. se define una fuente personalizada usando google fonts*/
-h3 {
+.card h3 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem; /*12. cambia el tamaño de la fuente*/
     font-style: normal; /* estilo de fuente*/
     font-weight: bold; /*peso de fuente*/
 }
 
-/*13. se experimenta con unidades rem en los parrafos de las cards*/
-p {
-    font-size: 1rem; /*Tamaño de fuente en rem*/
-}
-
-/*17. se inserta una imagen y aplica redimensionamiento con max-width y height: auto*/
-.card img {
-    max-width: 100%; /*se redimensionan la  imagen*/
-    height: auto;
-}
-
-/*18. se usa object-fit para manipular el contenido visual de imagenes en las card*/
-.card img.fit-cover {
-    object-fit: cover; /*se ajusta la imagen para cubrir el contenedor*/
-    width: 100%;
-    height: 150%;
-}
- 
 /*2. modifica 5 componentes (card) y una combinacion RGB por cada card*/
 .Dokkan { 
     background-color: rgb(230, 230, 250); /*lavander en rgb*/ 
